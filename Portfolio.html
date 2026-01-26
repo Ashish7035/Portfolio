@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashish Singh | EEE Portfolio</title>
+    
+    <style>
+        /* Basic Reset */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 2.5rem 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background: #34495e;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #1abc9c;
+        }
+
+        section {
+            padding: 2rem;
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .project-card {
+            border-left: 5px solid #1abc9c;
+            padding: 15px;
+            margin-bottom: 20px;
+            background: #f9f9f9;
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ashish Singh</h1>
+        <p>B.Tech EEE Student | Full Stack Developer | 3D Animator</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am an Electrical and Electronics Engineering student at KIIT University (Class of 2028). I'm passionate about building hardware projects like my Humanoid RC Car and creating web applications with React and Kotlin.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Major Projects</h2>
+        <div class="project-card">
+            <h3>Humanoid RC Car (Project-1)</h3>
+            <p>A wireless car using ESP32 and Arduino Nano. Features an ultrasonic sensor for avoidance, LDR for auto-headlights, and a Raspberry Pi camera for live view.</p>
+        </div>
+        <div class="project-card">
+            <h3>Digital Clock</h3>
+            <p>A compact clock built using an Arduino Nano and TM1637 4-digit displays.</p>
+        </div>
+        <div class="project-card">
+            <h3>Universal Gaming Controller</h3>
+            <p>Currently researching and building a custom controller for my own developed games.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Arsenal</h2>
+        <ul>
+            <li><strong>Programming:</strong> C, C++, Python, Kotlin, JavaScript</li>
+            <li><strong>Hardware:</strong> Arduino, ESP32, Raspberry Pi 5, Motor Drivers</li>
+            <li><strong>Software:</strong> MATLAB/Simulink, Blender (3D Animation), WebStorm</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Ashish Singh | <a href="http://ashishsingh7035.com.np">ashishsingh7035.com.np</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashish Singh | EEE Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #1abc9c;
+            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: var(--bg-gradient);
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 4rem 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-color);
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .header-text h1 { margin: 0; font-size: 2.8rem; }
+
+        .header-actions {
+            margin-top: 20px;
+        }
+
+        .cta-button {
+            background: var(--accent-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(26, 188, 156, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            background: #16a085;
+            box-shadow: 0 6px 20px rgba(26, 188, 156, 0.4);
+        }
+
+        nav {
+            background: #34495e;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        nav a:hover { color: var(--accent-color); }
+
+        section {
+            padding: 2.5rem;
+            max-width: 1000px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h2 { border-bottom: 3px solid var(--accent-color); padding-bottom: 10px; color: var(--primary-color); margin-bottom: 25px;}
+
+        .academic-entry {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .academic-entry:last-child { border-bottom: none; }
+
+        .academic-entry .year {
+            font-weight: bold;
+            color: var(--accent-color);
+            min-width: 100px;
+        }
+
+        .cert-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .cert-box {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .cert-box:hover { transform: scale(1.02); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
+
+        .cert-box img { width: 100%; display: block; }
+
+        .cert-info { padding: 15px; text-align: center; background: #fafafa; }
+
+        .skills-container { display: flex; flex-wrap: wrap; gap: 12px; list-style: none; padding: 0; }
+        .skill-tag { background: #e8f8f5; color: #16a085; padding: 8px 18px; border-radius: 25px; font-weight: bold; border: 1px solid var(--accent-color); }
+
+        .project-card, .lab-item {
+            border-left: 6px solid var(--accent-color);
+            padding: 20px;
+            margin-bottom: 25px;
+            background: #fdfdfd;
+            border-radius: 0 8px 8px 0;
+        }
+
+        footer { text-align: center; padding: 3rem; background: var(--primary-color); color: #bdc3c7; }
+        footer a { color: var(--accent-color); }
+
+        @media (max-width: 768px) {
+            .header-container { flex-direction: column; text-align: center; }
+            .academic-entry { flex-direction: column; text-align: center; gap: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <img src="ProfilePic.jpg" alt="Ashish Singh" class="profile-img">
+            <div class="header-text">
+                <h1>Ashish Singh</h1>
+                <p><i class="fas fa-bolt"></i> B.Tech EEE Student | Full Stack Developer | 3D Animator</p>
+                <div class="header-actions">
+                    <a href="https://drive.google.com/file/d/1aerTHzwXGX9BQH4xj_8qHGTxXf8UxzrN/view?usp=drive_link" class="cta-button" download>
+                        Download Resume <i class="fas fa-cloud-download-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#academics">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <li><a href="routineEEE.html" class="nav-link">EEE Routine</a></li>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a B.Tech Electrical and Electronics Engineering (EEE) student at KIIT University (2024-2028). I specialize in integrating embedded systems with modern software architecture, with a strong focus on IoT, full-stack app development, and 3D design.</p>
+    </section>
+
+    <section id="academics">
+        <h2>Education</h2>
+        <div class="academic-entry">
+            <div>
+                <strong>B.Tech in Electrical & Electronics Engineering</strong><br>
+                <span>KIIT University, Bhubaneswar, Odisha</span>
+            </div>
+            <div class="year">2024 - 2028</div>
+        </div>
+        <div class="academic-entry">
+            <div>
+                <strong>Schooling / Pre-University Education</strong><br>
+                <span>Nepal Academic Credentials</span>
+            </div>
+            <div class="year">Graduated 2024</div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Technical Arsenal</h2>
+        <ul class="skills-container">
+            <li class="skill-tag">C / C++</li><li class="skill-tag">Python</li>
+            <li class="skill-tag">Kotlin (Android)</li><li class="skill-tag">MATLAB / Simulink</li>
+            <li class="skill-tag">Arduino & ESP32</li><li class="skill-tag">Raspberry Pi 5</li>
+            <li class="skill-tag">Web Dev (HTML/CSS)</li><li class="skill-tag">Blender 3D</li>
+        </ul>
+    </section>
+
+    <section id="certificates">
+        <h2>Certifications</h2>
+        <div class="cert-gallery">
+            <div class="cert-box">
+                <img src="https://lh3.googleusercontent.com/u/0/d/1e_ff_a4PLpNkW5tiNcNS4iBt4Yqrooq1" alt="IITK">
+                <div class="cert-info"><h3>IITK Tech Workshop</h3></div>
+            </div>
+            <div class="cert-box">
+                <img src="https://lh3.googleusercontent.com/u/0/d/1HkwuehuchPwtph9eanCPcSxU4y1a-I02" alt="MATLAB">
+                <div class="cert-info"><h3>MATLAB Completion</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Major Projects</h2>
+        <div class="project-card">
+            <h3>Humanoid RC Car (Project-1)</h3>
+            <p>Advanced wireless vehicle utilizing ESP32, Arduino Nano, and Raspberry Pi 5MP camera for live streaming. Features object avoidance via ultrasonic sensors and automated lighting with LDRs.</p>
+        </div>
+        <div class="project-card">
+            <h3>Routine Management App</h3>
+            <p>Full-stack mobile application (Kotlin) for managing student hostel routines, bus timings, and class subjects.</p>
+        </div>
+    </section>
+
+    <section id="lab">
+        <h2>The Lab Inventory</h2>
+        <div class="lab-item">
+            <strong>Computing:</strong> Raspberry Pi 5 (2GB), Arduino UNO R4 WiFi, ESP32 NodeMCU.
+        </div>
+        <div class="lab-item">
+            <strong>Electronics:</strong> L298N Motor Driver, 18650 Li-ion batteries, MT3608 Step-up modules.
+        </div>
+    </section>
+
+    <footer>
+        <div style="margin-bottom: 20px;">
+            <a href="https://github.com/Ashish7035"><i class="fab fa-github fa-2x" style="margin: 0 10px;"></i></a>
+            <a href="https://www.linkedin.com/in/ashish-singh-224855359/"><i class="fab fa-linkedin fa-2x" style="margin: 0 10px;"></i></a>
+            <a href="https://www.facebook.com/share/1B2CiaXST1/" target="_blank" style="color:#1877F2; margin: 0 10px;"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="https://www.instagram.com/singh64ashish?igsh=czRrejkzMGR5dmd4" target="_blank" style="color:#E4405F; margin: 0 10px;"><i class="fab fa-instagram fa-2x"></i></a>
+        </div>
+        <p>© 2026 Ashish Singh</p>
+    </footer>
+
+</body>
+</html>

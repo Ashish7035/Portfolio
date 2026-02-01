@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIIT Hub | Bus Timings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #1abc9c;
+            --bg: #f0f2f5;
+            --white: #ffffff;
+            --text: #34495e;
+            --danger: #e74c3c;
+            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --- HEADER & NAV --- */
+        .header-brand {
+            background: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo-square { background: var(--primary); color: var(--accent); padding: 5px 10px; border-radius: 6px; }
+
+        nav {
+            background: var(--primary);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .nav-container {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-container a {
+            display: block;
+            padding: 15px 20px;
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .nav-container a:hover, .nav-container a.active { color: var(--accent); background: rgba(255,255,255,0.1); }
+
+        /* --- MAIN CONTENT --- */
+        main { max-width: 1100px; margin: 30px auto; padding: 0 15px; }
+
+        .status-alert {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #856404;
+        }
+
+        .bus-table-container {
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 800px;
+        }
+
+        th {
+            background: #f8f9fa;
+            color: var(--primary);
+            text-align: left;
+            padding: 15px;
+            border-bottom: 2px solid #eee;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #f1f1f1;
+            vertical-align: top;
+        }
+
+        .bus-id { font-weight: 800; color: var(--primary); }
+        .driver { font-size: 0.85rem; color: #7f8c8d; }
+        
+        .time-tag {
+            display: inline-block;
+            background: #eef2f7;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin: 2px 0;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .star-city { color: var(--accent); border-left: 3px solid var(--accent); padding-left: 5px; }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 600px) {
+            .nav-container a { padding: 12px 8px; font-size: 0.7rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-brand">
+        <a href="index.html" class="brand-logo">
+            <span class="logo-square">AS</span> ASHISH SINGH
+        </a>
+        <div style="text-align: right;">
+            <span style="font-weight: bold; color: var(--accent);">BUS SERVICES</span><br>
+            <small style="color: #95a5a6;">KIIT Campus Commute</small>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="nav-container">
+            <li><a href="routineEEE.html">EEE Routine</a></li>
+            <li><a href="messMenu.html">Mess Menu</a></li>
+            <li><a href="busRoutine.html" class="active">Bus Timing</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="status-alert">
+            <i class="fas fa-exclamation-triangle"></i> NOTE: Bus timings are valid for Monday to Friday ONLY. (Excludes Saturday & Sunday)
+        </div>
+
+        <div class="bus-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bus No / Driver</th>
+                        <th>Dep. Star City (KP-26)</th>
+                        <th>Dep. Campus-25</th>
+                        <th>Dep. Campus-15</th>
+                        <th>Dep. C-7, 8, 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="bus-id">BUS NO-15</span><br><span class="driver">Gayadhar</span></td>
+                        <td>
+                            <span class="time-tag star-city">9:20 AM</span><br>
+                            <span class="time-tag star-city">11:35 AM</span><br>
+                            <span class="time-tag star-city">1:35 PM</span><br>
+                            <span class="time-tag star-city">2:35 PM</span>
+                        </td>
+                        <td><span class="time-tag">11:10 AM</span><br><span class="time-tag">2:10 PM</span></td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><span class="bus-id">BUS NO-72</span><br><span class="driver">Prasuram</span></td>
+                        <td><span class="time-tag star-city">10:35 AM</span><br><span class="time-tag star-city">2:35 PM</span></td>
+                        <td><span class="time-tag">2:10 PM</span><br><span class="time-tag">5:10 PM</span></td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><span class="bus-id">BUS NO-32</span><br><span class="driver">Srikanta</span></td>
+                        <td>
+                            <span class="time-tag star-city">7:35 AM</span><br>
+                            <span class="time-tag star-city">8:35 AM</span><br>
+                            <span class="time-tag star-city">9:35 AM</span><br>
+                            <span class="time-tag star-city">3:30 PM</span>
+                        </td>
+                        <td>
+                            <span class="time-tag">12:10 PM</span><br>
+                            <span class="time-tag">1:10 PM</span><br>
+                            <span class="time-tag">6:15 PM</span>
+                        </td>
+                        <td>-</td>
+                        <td><span class="time-tag">2:10 PM (C3)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="bus-id">BUS NO-22</span><br><span class="driver">Jayanta</span></td>
+                        <td>
+                            <span class="time-tag star-city">7:35 AM</span><br>
+                            <span class="time-tag star-city">8:35 AM</span><br>
+                            <span class="time-tag star-city">10:35 AM</span><br>
+                            <span class="time-tag star-city">2:20 PM</span>
+                        </td>
+                        <td><span class="time-tag">4:15 PM</span><br><span class="time-tag">6:15 PM</span></td>
+                        <td><span class="time-tag">11:30 PM</span><br><span class="time-tag">1:25 PM</span><br><span class="time-tag">5:10 PM</span></td>
+                        <td><span class="time-tag">1:30 PM (C7)</span><br><span class="time-tag">3:30 PM (C7)</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="bus-id">MINI BUS</span><br><span class="driver">Pravash</span></td>
+                        <td>
+                            <span class="time-tag star-city">8:35 AM</span><br>
+                            <span class="time-tag star-city">9:40 AM</span><br>
+                            <span class="time-tag star-city">10:40 AM</span><br>
+                            <span class="time-tag star-city">3:35 PM</span>
+                        </td>
+                        <td><span class="time-tag">1:10 PM</span><br><span class="time-tag">5:05 PM</span></td>
+                        <td>-</td>
+                        <td><span class="time-tag">6:10 PM (C3)</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 style="margin-top: 40px;"><i class="fas fa-phone"></i> Transport Contacts</h3>
+        <div class="contact-grid">
+            <div class="contact-card"><span>Madana Sir</span> <strong>7978874294</strong></div>
+            <div class="contact-card"><span>Ananta</span> <strong>7473836490</strong></div>
+            <div class="contact-card"><span>Dipu</span> <strong>9861896984</strong></div>
+            <div class="contact-card"><span>Ajay</span> <strong>9776333782</strong></div>
+            <div class="contact-card"><span>Pramod</span> <strong>9437415713</strong></div>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 20px; color: #95a5a6; font-size: 0.8rem;">
+        Approved by Abhinash Mishr | Star City KP-26 Hub
+    </footer>
+
+</body>
+</html>

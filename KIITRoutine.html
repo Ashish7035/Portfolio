@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIIT Hub | EEE Routine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #1abc9c;
+            --bg: #f0f2f5;
+            --white: #ffffff;
+            --text: #34495e;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --- TOP BRANDING --- */
+        .header-brand {
+            background: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo-square {
+            background: var(--primary);
+            color: var(--accent);
+            padding: 5px 10px;
+            border-radius: 6px;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            background: var(--primary);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .nav-container {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-container li {
+            padding: 0;
+        }
+
+        .nav-container a {
+            display: block;
+            padding: 15px 25px;
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-container a:hover, .nav-container a.active {
+            background: rgba(255,255,255,0.1);
+            color: var(--accent);
+            border-bottom: 3px solid var(--accent);
+        }
+
+        /* --- MAIN CONTENT --- */
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .page-title h1 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .page-title p {
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+
+        /* --- ROUTINE GRID --- */
+        .routine-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .day-card {
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid #e1e8ed;
+        }
+
+        .day-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        }
+
+        .day-header {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            border-bottom: 2px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .day-header i { color: var(--accent); }
+
+        .schedule-list {
+            padding: 10px 20px;
+        }
+
+        .slot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .slot:last-child { border-bottom: none; }
+
+        .time {
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 0.9rem;
+            background: #e8f8f5;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        .subject {
+            font-weight: 600;
+            text-align: right;
+            color: var(--primary);
+        }
+
+        /* Color Coding */
+        .lab { color: #e67e22 !important; border-right: 4px solid #e67e22; padding-right: 10px; }
+        .elective { color: #8e44ad !important; border-right: 4px solid #8e44ad; padding-right: 10px; }
+
+        @media (max-width: 768px) {
+            .nav-container a { padding: 15px 10px; font-size: 0.75rem; }
+            .page-title h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-brand">
+        <a href="#" class="brand-logo">
+            <span class="logo-square">AS</span> ASHISH SINGH
+        </a>
+        <div style="text-align: right; line-height: 1.2;">
+            <span style="font-weight: bold; color: var(--accent);">B.TECH EEE</span><br>
+            <small style="color: #95a5a6;">KIIT University '28</small>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="nav-container">
+            <li><a href="routineEEE.html" class="active"><i class="fas fa-calendar-alt"></i> EEE Routine</a></li>
+            <li><a href="MessMenu.html"><i class="fas fa-utensils"></i> Mess Menu</a></li>
+            <li><a href="BusTiming.html"><i class="fas fa-bus"></i> Bus Timing</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="page-title">
+            <h1>4th Semester Class Schedule</h1>
+            <p><i class="fas fa-map-marker-alt"></i> Venue: CL-08 | Effective: Jan 2026</p>
+        </div>
+
+        <div class="routine-grid">
+            <div class="day-card">
+                <div class="day-header">Monday <i class="fas fa-bolt"></i></div>
+                <div class="schedule-list">
+                    <div class="slot"><span class="time">09:00 - 10:00</span><span class="subject">ICS</span></div>
+                    <div class="slot"><span class="time">10:00 - 11:00</span><span class="subject">I4.0T</span></div>
+                    <div class="slot"><span class="time">11:00 - 12:00</span><span class="subject">VDECA</span></div>
+                    <div class="slot"><span class="time">12:00 - 13:00</span><span class="subject">EM</span></div>
+                    <div class="slot"><span class="time">16:00 - 18:00</span><span class="subject lab">SP Lab</span></div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">Tuesday <i class="fas fa-bolt"></i></div>
+                <div class="schedule-list">
+                    <div class="slot"><span class="time">09:00 - 10:00</span><span class="subject elective">HASS</span></div>
+                    <div class="slot"><span class="time">10:00 - 11:00</span><span class="subject">EMTA</span></div>
+                    <div class="slot"><span class="time">11:00 - 12:00</span><span class="subject">VDECA</span></div>
+                    <div class="slot"><span class="time">12:00 - 13:00</span><span class="subject">ICS</span></div>
+                    <div class="slot"><span class="time">15:00 - 17:00</span><span class="subject lab">EM Lab</span></div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">Wednesday <i class="fas fa-bolt"></i></div>
+                <div class="schedule-list">
+                    <div class="slot"><span class="time">09:00 - 10:00</span><span class="subject elective">HASS</span></div>
+                    <div class="slot"><span class="time">10:00 - 11:00</span><span class="subject">EMTA</span></div>
+                    <div class="slot"><span class="time">11:00 - 13:00</span><span class="subject lab">ICS Lab</span></div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">Thursday <i class="fas fa-bolt"></i></div>
+                <div class="schedule-list">
+                    <div class="slot"><span class="time">10:00 - 11:00</span><span class="subject">I4.0T</span></div>
+                    <div class="slot"><span class="time">11:00 - 12:00</span><span class="subject">EMTA</span></div>
+                    <div class="slot"><span class="time">12:00 - 13:00</span><span class="subject">EM</span></div>
+                    <div class="slot"><span class="time">13:00 - 14:00</span><span class="subject">VDECA</span></div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">Friday <i class="fas fa-bolt"></i></div>
+                <div class="schedule-list">
+                    <div class="slot"><span class="time">09:00 - 10:00</span><span class="subject elective">HASS</span></div>
+                    <div class="slot"><span class="time">10:00 - 11:00</span><span class="subject">EM</span></div>
+                    <div class="slot"><span class="time">11:00 - 12:00</span><span class="subject">ICS</span></div>
+                    <div class="slot"><span class="time">12:00 - 13:00</span><span class="subject">VDECA</span></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 20px; color: #95a5a6; font-size: 0.8rem;">
+        Designed by Ashish Singh • KIIT EEE • KP-26 Hostel
+    </footer>
+
+</body>
+</html>

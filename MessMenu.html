@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KP-26 Updated Mess Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #e67e22; /* Food-themed orange */
+            --secondary: #27ae60; /* Fresh green */
+            --dark: #2c3e50;
+            --light: #f4f7f6;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 { color: var(--primary); margin-bottom: 5px; }
+        .location { color: #666; font-style: italic; }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .day-card {
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border-top: 6px solid var(--primary);
+        }
+
+        .day-header {
+            background: #fff8f0;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary);
+            border-bottom: 1px solid #eee;
+        }
+
+        .meal-box {
+            padding: 15px;
+            border-bottom: 1px solid #f9f9f9;
+        }
+
+        .meal-box:last-child { border-bottom: none; }
+
+        .meal-title {
+            font-weight: bold;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .meal-content {
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .footer-info {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><i class="fas fa-utensils"></i> KP-26 Updated Mess Menu</h1>
+        <p class="location">Effective from 19.01.2026</p>
+    </header>
+
+    <div class="container">
+        <div class="day-card">
+            <div class="day-header">Monday</div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-coffee"></i> Breakfast</div>
+                <div class="meal-content">Puri Ghuguni, / Corn Flakes, Milk, Banana & Tea</div>
+            </div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-sun"></i> Lunch</div>
+                <div class="meal-content">Rice, Roti, Dal, Mix Boiled Veg, Veg Navaratna Kurma, Aloo Karela Chips, Tamato Khajur Khata / Tamato Chatni</div>
+            </div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-cookie-bite"></i> Snacks</div>
+                <div class="meal-content">Onion Pakoda, Sauce / Rusk, Tea</div>
+            </div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-moon"></i> Dinner</div>
+                <div class="meal-content">Rice, Roti, Dal, Mixed Boiled Veg, Chilly Gobi / Gobi Masala, Crispy Veg Chips, Jalebi</div>
+            </div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header">Tuesday</div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-coffee"></i> Breakfast</div>
+                <div class="meal-content">Choole Bhuture, Boiled Egg, Bread, Butter, Jam & Tea</div>
+            </div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-sun"></i> Lunch</div>
+                <div class="meal-content">Rice, Roti, Dal, Mixed Boiled Veg, Kadai Veg, Alu Chokha, Dahi Bundi</div>
+            </div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-cookie-bite"></i> Snacks</div>
+                <div class="meal-content">Red Pasta / Masala Chuda Mix & Tea</div>
+            </div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-moon"></i> Dinner</div>
+                <div class="meal-content">Rice, Roti, Dal, Mixed Boiled Veg, Soyabin Alu Masala, Crispy Veg Chips, Semei Kheer</div>
+            </div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header">Wednesday</div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-coffee"></i> Breakfast</div>
+                <div class="meal-content">Egg Omlet, Veg Cutlet / Bread, Butter, Jam & Tea</div>
+            </div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-sun"></i> Lunch</div>
+                <div class="meal-content">Rice, Roti, Dal, Mixed Boiled Veg, Cabbage Alu Masala, Fish Masala, Salad</div>
+            </div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-cookie-bite"></i> Snacks</div>
+                <div class="meal-content">Noodles & Coffee</div>
+            </div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-moon"></i> Dinner</div>
+                <div class="meal-content">Rice, Roti, Dal, Mixed Boiled Veg, Chicken Punjabi, Paneer Punjabi, Raj Bhog / Gulab Jamun</div>
+            </div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header">Thursday</div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-coffee"></i> Breakfast</div>
+                <div class="meal-content">Bada, Ghuguni / Corn Flakes, Milk, Banana & Tea</div>
+            </div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-sun"></i> Lunch</div>
+                <div class="meal-content">Rice, Roti, Dal, Mixed Boil Veg, Muncharian, Alo Fulgobi Bhaja / Alu Bhindi Bhaja, Plain Curd</div>
+            </div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-cookie-bite"></i> Snacks</div>
+                <div class="meal-content">Boil Sprout / Masala Maggie & Tea</div>
+            </div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-moon"></i> Dinner</div>
+                <div class="meal-content">Rice, Roti, Dal, Mixed Boiled Veg, Egg Masala Fry, Parwalb Korma / Paneer Korma, Malpua</div>
+            </div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header">Friday</div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-coffee"></i> Breakfast</div>
+                <div class="meal-content">Veg Chowmin, Corn Flakes, Milk, Banana & Tea</div>
+            </div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-sun"></i> Lunch</div>
+                <div class="meal-content">Rice, Roti, Dal, Mixed Boiled Veg, Fish Curry, Besan Aloo Curry, Seasonal Bhaji, Nali (Frimes)</div>
+            </div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-cookie-bite"></i> Snacks</div>
+                <div class="meal-content">Chicken Soup, Veg Soup</div>
+            </div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-moon"></i> Dinner</div>
+                <div class="meal-content">Mix Veg Biryani / Chicken Biryani, Sahi Panner, Raita, Jal Jeera</div>
+            </div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header">Saturday</div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-coffee"></i> Breakfast</div>
+                <div class="meal-content">Paratha & Aloo Kasha / Aloo Bhaja, Pickle, Corn Flakes, Milk, Banana & Tea</div>
+            </div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-sun"></i> Lunch</div>
+                <div class="meal-content">Rice, Roti, Dal, Mixed Boiled Veg, Egg Masala Fry, Panner Chana Masala, Aloo Chokha & Pampad (Sriram)</div>
+            </div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-cookie-bite"></i> Snacks</div>
+                <div class="meal-content">Kala Chana Chat / Biscuit & Tea</div>
+            </div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-moon"></i> Dinner</div>
+                <div class="meal-content">Rice, Roti, Dal, Mixed Boiled Veg, Chicken Butter Masala, Paneer Butter Masala, Rasogula</div>
+            </div>
+        </div>
+
+        <div class="day-card">
+            <div class="day-header">Sunday</div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-coffee"></i> Breakfast</div>
+                <div class="meal-content">Masala Dosa, Sambar, Chutny / Bread, Butter, Jam & Coffee</div>
+            </div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-sun"></i> Lunch</div>
+                <div class="meal-content">Lemon Rice, Roti, Dal, Mixed Boiled Veg, Egg Masala Fry, Veg Kima Masala, Salad, Frimes</div>
+            </div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-cookie-bite"></i> Snacks</div>
+                <div class="meal-content">Dahi Papudi Chat & Tea</div>
+            </div>
+            <div class="meal-box">
+                <div class="meal-title"><i class="fas fa-moon"></i> Dinner</div>
+                <div class="meal-content">Rice, Roti, Mix Boiled Veg, Chicken Hyderabadi, Paneer Hyderabadi, Rice Kheer</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-info">
+        <strong>Important Serving Details:</strong>
+        <ul>
+            <li>Chicken: 4 pieces | Fish: 2 pieces | Egg: 2 pieces</li>
+            <li>Paneer & Manchurian: 6 pieces</li>
+            <li>Banana: 2 pieces | Rusk: 4 pieces | Puri/Paratha/Bada/Veg Cutlet: 4 pieces | Egg Omlet: 2 pieces</li>
+            <li>Everyday (Unlimited): Pickle, Onion, Lemon, Green Chilly, Salt</li>
+            <li>Mixed Boiled Veg served every day.</li>
+            <li>Biryani: Served one time with 4 pieces of chicken.</li>
+            <li>Sugar provided when Curd is served.</li>
+        </ul>
+    </div>
+
+</body>
+</html>
